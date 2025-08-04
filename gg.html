@@ -1,31 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+
+<head>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
     <title>耿鬼</title>
     <style>
-      body{background:#fff;font-family:'Comfortaa',sans-serif;}*{box-sizing:border-box;}*:before,*:after{content:'';position:absolute;}main{width:400px;height:400px;margin:auto;text-align:center;}.gengar{background:#9179c6;margin:3em auto 5em;width:310px;height:350px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;margin:auto;position:relative;}.gengar .ear{width:150px;height:150px;background:#9179c6;border-radius:10px;position:relative;transform:rotate(-120deg) skewX(-40deg) scale(1,0.866);position:absolute;top:0;}.gengar .ear.right{position:absolute;background:#9179c6;transform:rotate(110deg) skewX(40deg) scale(1,0.866);right:0;}.gengar .hair{width:0;height:0;position:absolute;top:-45px;left:50%;margin-left:-45px;transform:rotate(10deg);border-bottom:100px solid #9179c6;border-left:70px solid transparent;border-right:70px solid transparent;}.gengar .hair.two,.gengar .hair.two:before,.gengar .hair.two:after{transform:rotate(-30deg);margin-left:-60px;top:-35px;border-bottom:80px solid #9179c6;border-left:30px solid transparent;border-right:30px solid transparent;}.gengar .hair.two:before{transform:rotate(60deg) translate(130px,-50px);}.gengar .hair.two:after{transform:rotate(-15deg) translate(-10px,48px);border-bottom:40px solid #9179c6;}.gengar .eye{width:100px;height:50px;background:#f6b392;border-radius:0 0 200px 200px;position:absolute;top:33%;overflow:hidden;transition:0.3s ease;}.gengar .eye:before{width:20px;height:35px;background:black;border-radius:100%;transform:rotate(-35deg);}.gengar .eye:after{width:8px;height:8px;border-radius:50%;background:white;left:43%;top:10px;}.gengar .eye.one{left:50%;transform:rotate(35deg);margin-left:-120px;}.gengar .eye.two{transform:rotate(-35deg) scaleX(-1);right:50%;margin-right:-120px;}.gengar .mouth{position:absolute;left:50%;margin-left:-125px;top:7%;width:250px;height:190px;border-radius:50%;box-shadow:0 75px 0 -10px white;transition:0.3s ease;}.gengar .leg{position:absolute;width:320px;height:130px;border-top-left-radius:200px;border-top-right-radius:200px;border:80px solid #7a63ad;border-bottom:0;top:75%;left:0;right:0;margin:auto;z-index:-1;}.gengar .leg:before,.gengar .leg:after{height:20px;border-radius:10px;width:85px;bottom:-5px;background:#7a63ad;}.gengar .leg:before{left:-84.5px;}.gengar .leg:after{right:-84.5px;}.gengar .hand{position:absolute;width:85px;height:140px;background:#9179c6;border-radius:50% 50% 50% 50%/40% 40% 60% 60%;transform:rotate(59deg);top:31%;left:-40px;}.gengar .hand.two{transform:rotate(-59deg);left:auto;right:-40px;}input[type='checkbox']{height:0;width:0;visibility:hidden;}label{background:#eee;width:160px;height:75px;border-radius:80px;display:inline-block;margin:4em auto;position:relative;cursor:pointer;}label span{position:absolute;top:5px;left:5px;width:65px;height:65px;background:#333;border-radius:50%;transition:0.5s;border:3px solid #222;background:radial-gradient(
-            #fff,#fff 15%,#333 15%,#333 24%,transparent 24%
-          ),linear-gradient(
-            to bottom,#d02222,#d02222 45%,#222 45%,#222 52%,#fff 52%
-          );}input:checked + label span{left:90px;transform:rotate(360deg);background:#f38dcb;border-radius:200% 320% 150% 150%;border-radius:50%;background-repeat:no-repeat;background-image:radial-gradient(ellipse,black 50%,transparent 50%),radial-gradient(ellipse,black 50%,transparent 50%),linear-gradient(#333,#333);background-size:6px 6px,6px 6px,25px 2px;background-position:28% 50%,80% 50%,55% 64%;}input:checked ~ .gengar .eye{background:black;width:16px;height:16px;border-radius:50%;}input:checked ~ .gengar .eye.one{margin-left:-60px;}input:checked ~ .gengar .eye.two{margin-right:-60px;}input:checked ~ .gengar .eye:before,input:checked ~ .gengar .eye:after{content:none;}input:checked ~ .gengar .mouth{margin-left:-100px;top:35%;width:210px;height:50px;border-radius:50%;box-shadow:0 15px 0 -10px #131313;}</style>
-  </head>
-  <body>
+        body {
+            background: #fff;
+            font-family: 'Comfortaa', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        *:before,
+        *:after {
+            content: '';
+            position: absolute;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .gengar {
+            background: #9179c6;
+            margin: 3em auto 5em;
+            width: 310px;
+            height: 350px;
+            border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+            margin: auto;
+            position: relative;
+        }
+
+        .gengar .ear {
+            width: 150px;
+            height: 150px;
+            background: #9179c6;
+            border-radius: 10px;
+            position: relative;
+            transform: rotate(-120deg) skewX(-40deg) scale(1, 0.866);
+            position: absolute;
+            top: 0;
+        }
+
+        .gengar .ear.right {
+            position: absolute;
+            background: #9179c6;
+            transform: rotate(110deg) skewX(40deg) scale(1, 0.866);
+            right: 0;
+        }
+
+        .gengar .hair {
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            margin-left: -45px;
+            transform: rotate(10deg);
+            border-bottom: 100px solid #9179c6;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+        }
+
+        .gengar .hair.two,
+        .gengar .hair.two:before,
+        .gengar .hair.two:after {
+            transform: rotate(-30deg);
+            margin-left: -60px;
+            top: -35px;
+            border-bottom: 80px solid #9179c6;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+        }
+
+        .gengar .hair.two:before {
+            transform: rotate(60deg) translate(130px, -50px);
+        }
+
+        .gengar .hair.two:after {
+            transform: rotate(-15deg) translate(-10px, 48px);
+            border-bottom: 40px solid #9179c6;
+        }
+
+        .gengar .eye {
+            width: 100px;
+            height: 50px;
+            background: #f6b392;
+            border-radius: 0 0 200px 200px;
+            position: absolute;
+            top: 33%;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .gengar .eye:before {
+            width: 20px;
+            height: 35px;
+            background: black;
+            border-radius: 100%;
+            transform: rotate(-35deg);
+        }
+
+        .gengar .eye:after {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+            left: 43%;
+            top: 10px;
+        }
+
+        .gengar .eye.one {
+            left: 50%;
+            transform: rotate(35deg);
+            margin-left: -120px;
+        }
+
+        .gengar .eye.two {
+            transform: rotate(-35deg) scaleX(-1);
+            right: 50%;
+            margin-right: -120px;
+        }
+
+        .gengar .mouth {
+            position: absolute;
+            left: 50%;
+            margin-left: -125px;
+            top: 7%;
+            width: 250px;
+            height: 190px;
+            border-radius: 50%;
+            box-shadow: 0 75px 0 -10px white;
+            transition: 0.3s ease;
+        }
+
+        .gengar .leg {
+            position: absolute;
+            width: 320px;
+            height: 130px;
+            border-top-left-radius: 200px;
+            border-top-right-radius: 200px;
+            border: 80px solid #7a63ad;
+            border-bottom: 0;
+            top: 75%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: -1;
+        }
+
+        .gengar .leg:before,
+        .gengar .leg:after {
+            height: 20px;
+            border-radius: 10px;
+            width: 85px;
+            bottom: -5px;
+            background: #7a63ad;
+        }
+
+        .gengar .leg:before {
+            left: -84.5px;
+        }
+
+        .gengar .leg:after {
+            right: -84.5px;
+        }
+
+        .gengar .hand {
+            position: absolute;
+            width: 85px;
+            height: 140px;
+            background: #9179c6;
+            border-radius: 50% 50% 50% 50%/40% 40% 60% 60%;
+            transform: rotate(59deg);
+            top: 31%;
+            left: -40px;
+        }
+
+        .gengar .hand.two {
+            transform: rotate(-59deg);
+            left: auto;
+            right: -40px;
+        }
+
+        input[type='checkbox'] {
+            height: 0;
+            width: 0;
+            visibility: hidden;
+        }
+
+        label {
+            background: #eee;
+            width: 160px;
+            height: 75px;
+            border-radius: 80px;
+            display: inline-block;
+            margin: 4em auto;
+            position: relative;
+            cursor: pointer;
+        }
+
+        label span {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 65px;
+            height: 65px;
+            background: #333;
+            border-radius: 50%;
+            transition: 0.5s;
+            border: 3px solid #222;
+            background: radial-gradient(#fff, #fff 15%, #333 15%, #333 24%, transparent 24%), linear-gradient(to bottom, #d02222, #d02222 45%, #222 45%, #222 52%, #fff 52%);
+        }
+
+        input:checked+label span {
+            left: 90px;
+            transform: rotate(360deg);
+            background: #f38dcb;
+            border-radius: 200% 320% 150% 150%;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-image: radial-gradient(ellipse, black 50%, transparent 50%), radial-gradient(ellipse, black 50%, transparent 50%), linear-gradient(#333, #333);
+            background-size: 6px 6px, 6px 6px, 25px 2px;
+            background-position: 28% 50%, 80% 50%, 55% 64%;
+        }
+
+        input:checked~.gengar .eye {
+            background: black;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+
+        input:checked~.gengar .eye.one {
+            margin-left: -60px;
+        }
+
+        input:checked~.gengar .eye.two {
+            margin-right: -60px;
+        }
+
+        input:checked~.gengar .eye:before,
+        input:checked~.gengar .eye:after {
+            content: none;
+        }
+
+        input:checked~.gengar .mouth {
+            margin-left: -100px;
+            top: 35%;
+            width: 210px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 15px 0 -10px #131313;
+        }
+    </style>
+    <style>
+        /* 文本样式相关调整，包含字体大小等 */
+        .text {
+            position: absolute;
+            font-size: 30px;
+            pointer-events: none;
+            /* 让文本不阻挡点击事件 */
+            animation: floatUpAndFade 1s linear forwards;
+            /* 动画速度为1秒 */
+        }
+
+        @keyframes floatUpAndFade {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
     <main>
-      <input type="checkbox" id="ditto-me" />
-      <label for="ditto-me"><span></span></label>
-      <div class="gengar">
-        <div class="ear left"></div>
-        <div class="ear right"></div>
-        <div class="hair"></div>
-        <div class="hair two"></div>
-        <div class="hand"></div>
-        <div class="hand two"></div>
-        <div class="mouth"></div>
-        <div class="eye one"></div>
-        <div class="eye two"></div>
-        <div class="leg"></div>
-      </div>
+        <input type="checkbox" id="ditto-me" />
+        <label for="ditto-me"><span></span></label>
+        <div class="gengar">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="hair"></div>
+            <div class="hair two"></div>
+            <div class="hand"></div>
+            <div class="hand two"></div>
+            <div class="mouth"></div>
+            <div class="eye one"></div>
+            <div class="eye two"></div>
+            <div class="leg"></div>
+        </div>
     </main>
-  </body>
+</body>
+
 </html>
